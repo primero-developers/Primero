@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/slot_list_parent"
+    android:layout_width="80dp"
+    android:layout_height="match_parent"
+    android:layout_marginRight="16dp"
+
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="12dp"
+        android:background="@drawable/slot_back"
+        >
+        <RelativeLayout
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/nested_slot_divider"
+            android:layout_centerInParent="true"/>
+        <TextView
+            android:id="@+id/slot_time_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/bahn_font"
+            android:textColor="#fff"/>
+        <TextView
+            android:id="@+id/slot_time_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:text="8"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/bahn_font"
+            android:textColor="#fff"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:minWidth="42dp"
+        android:layout_height="37dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/nested_slot_corner"
+        >
+
+        <TextView
+            android:id="@+id/nested_slot_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:text="\u20B9 1200"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/bahn_font"
+            android:textColor="#fff"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

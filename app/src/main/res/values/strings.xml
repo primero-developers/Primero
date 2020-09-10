@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Primero</string>
+    <string name="phone_input_hint">Phone</string>
+
+    <string name="def_avatar_name">NOT SET</string>
+
+    <string name="rupees">\u20B9</string>
+</resources>

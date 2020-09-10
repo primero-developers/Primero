@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/nav_grp_1"
+        >
+        <item
+            android:id="@+id/Notification"
+            android:title="Notification"/>
+
+        <item
+            android:id="@+id/Booking"
+            android:title="Booking"/>
+
+    </group>
+    <group
+        android:id="@+id/nav_grp_2">
+        <item
+
+            android:id="@+id/Earning"
+            android:title="Earning"
+            >
+        </item>
+
+        <item
+            android:id="@+id/PaymentMethods"
+            android:title="Payment Methods"/>
+        <item
+            android:id="@+id/Coupons"
+            android:title="Coupons"/>
+    </group>
+
+    <group
+        android:id="@+id/nav_grp_3">
+
+        <item
+            android:id="@+id/HelpFeedbak"
+            android:title="Help &amp; Feedback"/>
+    </group>
+</menu>

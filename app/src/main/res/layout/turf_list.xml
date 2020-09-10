@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:background="@drawable/turf_list_item_back"
+    android:layout_marginBottom="6dp"
+    android:id="@+id/turf_list_parent"
+    android:transitionName="PARENT_TRANSITION"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="24dp"
+        >
+
+        <TextView
+            android:id="@+id/turf_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turf Title"
+            android:textSize="18dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="#232323"
+            android:transitionName="TITLE_TRANSTION"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/turf_title">
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:src="@drawable/ic_baseline_location_on_24"-->
+<!--                android:layout_marginVertical="2dp"/>-->
+
+            <TextView
+                android:id="@+id/turf_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textColor="#DD232323"
+                android:textSize="12sp"
+                android:layout_below="@id/turf_title"
+                android:transitionName="LOCATION_TRANSITION"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/turf_corner_back">
+
+        <TextView
+            android:id="@+id/turf_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="22dp"
+            android:textSize="14sp"
+            android:textColor="#232323"
+            android:text="5's"/>
+    </RelativeLayout>
+</RelativeLayout>

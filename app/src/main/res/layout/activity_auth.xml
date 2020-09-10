@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/authBack"
+    android:paddingHorizontal="40dp"
+    android:paddingVertical="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/auth_logo_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="#fff"
+        android:fontFamily="@font/gabriola_font"
+        android:textSize="40sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/auth_content"
+        android:layout_below="@id/auth_logo_txt"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        >
+
+        <TextSwitcher
+            android:id="@+id/auth_text_switcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter your mobile number"
+                android:textColor="#fff"
+                android:fontFamily="@font/bahn_font"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="An OTP had send to +91 9048049239"
+                android:textColor="#fff"
+                android:textSize="18sp"/>
+        </TextSwitcher>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/auth_input_layout"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_baseline_phone_24"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            app:helperTextEnabled="true"
+            app:errorEnabled="true"
+            app:boxStrokeErrorColor="@color/errorColor"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/auth_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahn_font"
+                android:textSize="16sp"
+                android:inputType="number"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/auth_btn"
+            android:layout_width="130dp"
+            android:layout_height="48dp"
+            android:background="@drawable/otp_btn_back"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="8dp"
+            android:transitionName="auth_reveal"
+            >
+
+            <RelativeLayout
+                android:id="@+id/auth_btn_revealer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/otp_verify_btn"
+                android:visibility="invisible"
+                />
+
+            <ProgressBar
+                android:id="@+id/auth_btn_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginVertical="8dp"
+                android:visibility="gone"
+                />
+
+
+            <TextView
+                android:id="@+id/auth_btn_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="SEND OTP"
+                android:fontFamily="@font/bahn_font"
+                android:transitionName="btn_reveal"
+                android:textStyle="bold"
+                android:textColor="#fff" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

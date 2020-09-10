@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+
+    <color name="splashBackground">#172027</color>
+    <color name="splashStatusBar">#172027</color>
+
+    <color name="authBack">#172027</color>
+    <color name="authStatusBar">#172027</color>
+    
+    <color name="primaryGreen">#02D9CA</color>
+
+    <color name="errorColor">#FF3636</color>
+
+    <color name="black">#000000</color>
+    <color name="offBlack">#232323</color>
+    <color name="white">#ffffff</color>
+
+    <color name="mainStatusBar">#00ffffff</color>
+    <color name="mainBackground">#fefeff</color>
+    <color name="mainSideBar">#44f1f1f1</color>
+
+    <color name="navDivider">#2ACDCCCC</color>
+
+    <color name="titleColor">#6b6b6b</color>
+</resources>

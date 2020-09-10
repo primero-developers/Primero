@@ -1,0 +1,82 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="android:windowBackground">@drawable/splash_screen_back</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/splashStatusBar</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="AuthTheme" parent="Theme.MaterialComponents.NoActionBar">
+
+        <item name="colorPrimary">@color/primaryGreen</item>
+        <item name="colorPrimaryDark">@color/authStatusBar</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowSharedElementEnterTransition">
+            @transition/change_image_transform</item>
+        <item name="android:windowSharedElementExitTransition">
+            @transition/change_image_transform</item>
+
+    </style>
+
+    <style name="IntroTheme" parent="Theme.MaterialComponents.NoActionBar">
+
+        <item name="colorPrimary">@color/primaryGreen</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowSharedElementEnterTransition">
+            @transition/change_image_transform</item>
+        <item name="android:windowSharedElementExitTransition">
+            @transition/change_image_transform</item>
+
+    </style>
+
+    <style name="MainTheme" parent="Theme.MaterialComponents.NoActionBar.Bridge">
+
+        <item name="colorPrimary">@color/offBlack</item>
+        <item name="colorPrimaryDark">@color/mainStatusBar</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="divider">@drawable/menu_item_padding</item>
+        <item name="android:listDivider">@color/navDivider</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/main_screen_back</item>
+
+        <item name="listPreferredItemHeightSmall">55dp</item>
+
+        <item name="android:fontFamily">@font/bahn_font</item>
+
+        <item name="android:editTextColor">@color/offBlack</item>
+        <item name="android:textColorHint">@color/offBlack</item>
+        <item name="android:textSize">16sp</item>
+
+        <item name="boxStrokeColor">#fff</item>
+        <item name="boxStrokeWidth">2dp</item>
+
+        <!-- enable window content transitions -->
+        <item name="android:windowActivityTransitions">true</item>
+
+        <!-- specify enter and exit transitions -->
+        <item name="android:windowEnterTransition">@transition/explode</item>
+        <item name="android:windowExitTransition">@transition/explode</item>
+
+        <!-- specify shared element transitions -->
+        <item name="android:windowSharedElementEnterTransition">
+            @transition/change_image_transform</item>
+        <item name="android:windowSharedElementExitTransition">
+            @transition/change_image_transform</item>
+    </style>
+</resources>

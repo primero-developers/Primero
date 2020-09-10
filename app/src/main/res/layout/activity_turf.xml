@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.TurfActivity"
+    android:background="#fff"
+    >
+
+    <RelativeLayout
+        android:id="@+id/header_parent"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:paddingHorizontal="24dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/image_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="30dp"
+            >
+            <RelativeLayout
+                android:id="@+id/gradient_contaner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/turf_header_back"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:background="#000"
+                android:elevation="0dp"
+                app:cardCornerRadius="8dp"
+                >
+                <ImageView
+                    android:id="@+id/turf_header_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/turf_2"
+                    android:scaleType="centerCrop"
+                    />
+
+
+                <RelativeLayout
+                    android:id="@+id/overlay_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/turf_header_overlay"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/txt_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="24dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/turf_header_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cornation club,"
+                            android:textSize="22dp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"
+                            android:transitionName="TITLE_TRANSITION"
+                            />
+                        <TextView
+                            android:id="@+id/turf_header_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mattanchery"
+                            android:textColor="#fff"
+                            android:textSize="16dp"
+                            android:layout_below="@id/turf_header_name"
+                            android:layout_marginTop="6dp"
+                            android:transitionName="LOCATION_TRANSITION"
+                            />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_baseline_favorite_border_24"
+                            android:layout_alignParentRight="true"/>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/slot_list_nested_parent"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="38dp"
+            android:paddingBottom="6dp"
+            android:layout_alignParentBottom="true">
+
+            <com.github.rongi.rotate_layout.layout.RotateLayout
+                android:id="@+id/slot_header_rotator"
+                android:layout_width="wrap_content"
+                android:rotation="-90"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/nested_slot_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Slots"
+                    android:textColor="#fff"
+                    android:textSize="16dp"/>
+
+            </com.github.rongi.rotate_layout.layout.RotateLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/nested_slot_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/slot_header_rotator"
+                android:layout_marginLeft="10dp"/>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- HEADER VIEW ENDS  -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_parent"
+        android:layout_above="@id/input_parent"
+        android:paddingHorizontal="30dp"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/turf_map_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:fontFamily="@font/bahn_font"
+                android:textSize="18dp"
+                android:textColor="@color/titleColor"
+                />
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="6dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/turf_content_underline"/>
+            <ScrollView
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/details_content_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/bahn_font"
+                    android:textColor="@color/offBlack"
+                    />
+
+            </ScrollView>
+
+
+
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/turf_map_parent"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            app:cardCornerRadius="6dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/turf_map_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/turf_2"
+                android:scaleType="centerCrop" />
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/input_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="24dp"
+        android:background="@color/white"
+        >
+
+        <RelativeLayout
+            android:id="@+id/phone_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/phone_btn_back"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="0dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="phone ic"
+                android:src="@drawable/ic_baseline_phone_24"/>
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/book_now_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_toEndOf="@id/phone_btn"
+            android:text="BOOK NOW"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_back"
+            android:textColor="#fff"
+            android:layout_margin="0dp"
+            android:fontFamily="@font/bahn_font"
+            />
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
